@@ -1,0 +1,15 @@
+COMMAND: v.in.ogr dsn="bstopSp07.shp" output="bstopSp07" min_area=0.0001 snap=-1
+GISDBASE: /local/home/helena/grassdata
+LOCATION: nc_spf MAPSET: PERMANENT USER: hmitaso DATE: Fri Mar 16 12:50:41 2007
+---------------------------------------------------------------------------------
+COMMAND: v.proj input="bstopSp07" location="nc_spf" mapset="PERMANENT" output="busstopsall"
+GISDBASE: /local/home/helena/grassdata
+LOCATION: nc_spm MAPSET: PERMANENT USER: hmitaso DATE: Mon Mar 19 12:35:06 2007
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect -o map="busstopsall@PERMANENT" driver="sqlite" database="/home/neteler/grassdata/nc_spm_latest/nc_spm_08/PERMANENT/sqlite/sqlite.db" table="busstopsall" key="cat" layer="1" separator="|"
+GISDBASE: /home/neteler/grassdata/nc_spm_latest
+LOCATION: nc_spm_08 MAPSET: PERMANENT USER: neteler DATE: Mon Nov 26 16:57:04 2012
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect -o map="busstopsall@PERMANENT" driver="sqlite" database="$GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db" table="busstopsall" key="cat" layer="1" separator="|"
+GISDBASE: /home/neteler/grassdata
+LOCATION: nc_spm_08_grass7 MAPSET: PERMANENT USER: neteler DATE: Fri Dec  7 23:25:14 2012

@@ -1,0 +1,22 @@
+COMMAND: v.in.ogr dsn="wakecounty_hp.shp" output="whydroareas" min_area=0.0001 snap=-1
+GISDBASE: /bigdata/grassdata05
+LOCATION: wakestpfeet MAPSET: PERMANENT USER: helena DATE: Tue Nov  7 19:48:08 2006
+---------------------------------------------------------------------------------
+15279 input polygons
+total area: 9.309826e+07 (15279 areas)
+overlapping area: 0.000000e+00 (0 areas)
+area without category: 0.000000e+00 (0 areas)
+---------------------------------------------------------------------------------
+COMMAND: v.proj input="whydroareas" location="wakestpfeet"
+GISDBASE: /bigdata/grassdata05
+LOCATION: ncfromfile MAPSET: PERMANENT USER: helena DATE: Tue Nov  7 21:04:49 2006
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect -o map="lakes@PERMANENT" driver="sqlite" database="/home/neteler/grassdata/nc_spm_latest/nc_spm_08/PERMANENT/sqlite/sqlite.db" table="lakes" key="cat" layer="1" separator="|"
+GISDBASE: /home/neteler/grassdata/nc_spm_latest
+LOCATION: nc_spm_08 MAPSET: PERMANENT USER: neteler DATE: Mon Nov 26 16:57:15 2012
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect -o map="lakes@PERMANENT" driver="sqlite" database="$GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db" table="lakes" key="cat" layer="1" separator="|"
+GISDBASE: /home/neteler/grassdata
+LOCATION: nc_spm_08_grass7 MAPSET: PERMANENT USER: neteler DATE: Fri Dec  7 23:25:14 2012

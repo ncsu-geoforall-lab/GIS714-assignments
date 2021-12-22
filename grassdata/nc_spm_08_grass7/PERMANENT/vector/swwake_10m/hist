@@ -1,0 +1,4 @@
+COMMAND: v.in.region output="region_10m" type="area"
+GISDBASE: /bigdata/grassdata05
+LOCATION: nc_spm MAPSET: PERMANENT USER: helena DATE: Mon Jan 15 00:07:32 2007
+---------------------------------------------------------------------------------

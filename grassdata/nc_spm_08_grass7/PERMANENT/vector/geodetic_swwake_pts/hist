@@ -1,0 +1,25 @@
+COMMAND: v.in.ogr dsn="gdc.shp" output="geodetic_pts" min_area=0.0001 snap=-1
+GISDBASE: /bigdata/grassdata05
+LOCATION: ncfromfile MAPSET: PERMANENT USER: helena DATE: Thu Oct 19 22:50:25 2006
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+COMMAND: v.db.addcol "mygeodetic_pts" "col=zval double precision"
+GISDBASE: /ssi0/ssi/neteler/grassdata
+LOCATION: nc_spm_05 MAPSET: sqlite USER: neteler DATE: Wed May  9 12:36:26 2007
+---------------------------------------------------------------------------------
+COMMAND: v.db.dropcol "mygeodetic_pts" "col=Z_VALUE"
+GISDBASE: /ssi0/ssi/neteler/grassdata
+LOCATION: nc_spm_05 MAPSET: sqlite USER: neteler DATE: Wed May  9 13:31:35 2007
+---------------------------------------------------------------------------------
+COMMAND: v.select ainput="mygeodetic_pts" atype="point,line,boundary,centroid,area" alayer=1 binput="swwake_10m" btype="point,line,boundary,centroid,area" blayer=1 output="geodetic_swwake_pts" operator="overlap"
+GISDBASE: /ssi0/ssi/neteler/grassdata
+LOCATION: nc_spm_05 MAPSET: sqlite USER: neteler DATE: Wed May  9 13:33:43 2007
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect -o map="geodetic_swwake_pts@PERMANENT" driver="sqlite" database="/home/neteler/grassdata/nc_spm_latest/nc_spm_08/PERMANENT/sqlite/sqlite.db" table="geodetic_swwake_pts" key="cat" layer="1" separator="|"
+GISDBASE: /home/neteler/grassdata/nc_spm_latest
+LOCATION: nc_spm_08 MAPSET: PERMANENT USER: neteler DATE: Mon Nov 26 16:56:13 2012
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect -o map="geodetic_swwake_pts@PERMANENT" driver="sqlite" database="$GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db" table="geodetic_swwake_pts" key="cat" layer="1" separator="|"
+GISDBASE: /home/neteler/grassdata
+LOCATION: nc_spm_08_grass7 MAPSET: PERMANENT USER: neteler DATE: Fri Dec  7 23:25:13 2012

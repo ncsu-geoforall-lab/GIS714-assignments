@@ -1,0 +1,11 @@
+COMMAND: v.in.ogr dsn="NCDOTBridgeLocations.shp" output="overpasses" min_area=0.0001 snap=-1
+GISDBASE: /ssi0/ssi/neteler/grassdata
+LOCATION: nc_spm_05 MAPSET: PERMANENT USER: neteler DATE: Wed May  9 11:53:01 2007
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect -o map="overpasses@PERMANENT" driver="sqlite" database="/home/neteler/grassdata/nc_spm_latest/nc_spm_08/PERMANENT/sqlite/sqlite.db" table="overpasses" key="cat" layer="1" separator="|"
+GISDBASE: /home/neteler/grassdata/nc_spm_latest
+LOCATION: nc_spm_08 MAPSET: PERMANENT USER: neteler DATE: Mon Nov 26 16:57:30 2012
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect -o map="overpasses@PERMANENT" driver="sqlite" database="$GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db" table="overpasses" key="cat" layer="1" separator="|"
+GISDBASE: /home/neteler/grassdata
+LOCATION: nc_spm_08_grass7 MAPSET: PERMANENT USER: neteler DATE: Fri Dec  7 23:25:15 2012

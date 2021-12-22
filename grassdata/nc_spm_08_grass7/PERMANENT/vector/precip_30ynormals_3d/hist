@@ -1,0 +1,19 @@
+COMMAND: v.in.db table="precip_30ynormals_tmp" driver="dbf" database="$GISDBASE/$LOCATION_NAME/$MAPSET/dbf/" x="x" y="y" z="elev" key="cat" output="precip_30ynormals_3d"
+GISDBASE: /ssi0/ssi/neteler/grassdata
+LOCATION: nc_spm_05 MAPSET: PERMANENT USER: neteler DATE: Wed May  9 14:32:39 2007
+---------------------------------------------------------------------------------
+COMMAND: v.db.dropcol "precip_30ynormals_3d" "col=x"
+GISDBASE: /ssi0/ssi/neteler/grassdata
+LOCATION: nc_spm_05 MAPSET: PERMANENT USER: neteler DATE: Wed May  9 14:33:25 2007
+---------------------------------------------------------------------------------
+COMMAND: v.db.dropcol "precip_30ynormals_3d" "col=y"
+GISDBASE: /ssi0/ssi/neteler/grassdata
+LOCATION: nc_spm_05 MAPSET: PERMANENT USER: neteler DATE: Wed May  9 14:33:26 2007
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect -o map="precip_30ynormals_3d@PERMANENT" driver="sqlite" database="/home/neteler/grassdata/nc_spm_latest/nc_spm_08/PERMANENT/sqlite/sqlite.db" table="precip_30ynormals_3d" key="cat" layer="1" separator="|"
+GISDBASE: /home/neteler/grassdata/nc_spm_latest
+LOCATION: nc_spm_08 MAPSET: PERMANENT USER: neteler DATE: Mon Nov 26 16:55:13 2012
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect -o map="precip_30ynormals_3d@PERMANENT" driver="sqlite" database="$GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db" table="precip_30ynormals_3d" key="cat" layer="1" separator="|"
+GISDBASE: /home/neteler/grassdata
+LOCATION: nc_spm_08_grass7 MAPSET: PERMANENT USER: neteler DATE: Fri Dec  7 23:25:11 2012

@@ -1,0 +1,21 @@
+COMMAND: v.in.ogr dsn="ZIP_Codes.shp" output="zipcodes_wake" min_area=0.0001 snap=20
+GISDBASE: /home/neteler/grassdata
+LOCATION: nc_spft MAPSET: PERMANENT USER: neteler DATE: Wed Aug 15 09:51:36 2007
+---------------------------------------------------------------------------------
+46 input polygonsTotal area: 2.219442e+09 (48 areas)Overlapping area: 0.000000e+00 (0 areas)Area without category: 0.000000e+00 (0 areas)
+---------------------------------------------------------------------------------
+COMMAND: v.proj input="zipcodes_wake" location="nc_spft" output="zipcodes"
+GISDBASE: /home/neteler/grassdata
+LOCATION: nc_spm_06 MAPSET: PERMANENT USER: neteler DATE: Wed Aug 15 09:53:47 2007
+---------------------------------------------------------------------------------
+COMMAND: v.clean input="zipcodes" output="zipcodes_wake" type="point,line,boundary,centroid,area" tool="rmline"
+GISDBASE: /home/neteler/grassdata
+LOCATION: nc_spm_06 MAPSET: PERMANENT USER: neteler DATE: Wed Aug 15 09:54:07 2007
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect -o map="zipcodes_wake@PERMANENT" driver="sqlite" database="/home/neteler/grassdata/nc_spm_latest/nc_spm_08/PERMANENT/sqlite/sqlite.db" table="zipcodes_wake" key="cat" layer="1" separator="|"
+GISDBASE: /home/neteler/grassdata/nc_spm_latest
+LOCATION: nc_spm_08 MAPSET: PERMANENT USER: neteler DATE: Mon Nov 26 16:57:18 2012
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect -o map="zipcodes_wake@PERMANENT" driver="sqlite" database="$GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db" table="zipcodes_wake" key="cat" layer="1" separator="|"
+GISDBASE: /home/neteler/grassdata
+LOCATION: nc_spm_08_grass7 MAPSET: PERMANENT USER: neteler DATE: Fri Dec  7 23:25:14 2012

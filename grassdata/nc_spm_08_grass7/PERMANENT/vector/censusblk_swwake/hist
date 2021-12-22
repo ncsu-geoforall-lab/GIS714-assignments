@@ -1,0 +1,13 @@
+COMMAND: v.in.ogr dsn="censusblocks_swwake2.shp" output="censusblk_swwake" min_area=0.0001 snap=-1
+GISDBASE: /local/home/helena/grassdata
+LOCATION: nc_spm MAPSET: user1 USER: hmitaso DATE: Mon Mar 19 22:01:37 2007
+---------------------------------------------------------------------------------
+2537 input polygonstotal area: 2.325594e+08 (2547 areas)overlapping area: 0.000000e+00 (0 areas)area without category: 3.872938e+05 (10 areas)---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect -o map="censusblk_swwake@PERMANENT" driver="sqlite" database="/home/neteler/grassdata/nc_spm_latest/nc_spm_08/PERMANENT/sqlite/sqlite.db" table="censusblk_swwake" key="cat" layer="1" separator="|"
+GISDBASE: /home/neteler/grassdata/nc_spm_latest
+LOCATION: nc_spm_08 MAPSET: PERMANENT USER: neteler DATE: Mon Nov 26 16:57:21 2012
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect -o map="censusblk_swwake@PERMANENT" driver="sqlite" database="$GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db" table="censusblk_swwake" key="cat" layer="1" separator="|"
+GISDBASE: /home/neteler/grassdata
+LOCATION: nc_spm_08_grass7 MAPSET: PERMANENT USER: neteler DATE: Fri Dec  7 23:25:14 2012

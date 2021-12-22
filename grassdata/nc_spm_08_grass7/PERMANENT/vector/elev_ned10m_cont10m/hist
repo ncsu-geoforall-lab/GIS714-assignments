@@ -1,0 +1,11 @@
+COMMAND: r.contour input="elev_ned10m" output="elev_ned10m_cont10m" step=10 cut=0
+GISDBASE: /bigdata/grassdata05
+LOCATION: ncfromfile MAPSET: PERMANENT USER: helena DATE: Tue Nov  7 20:59:46 2006
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect -o map="elev_ned10m_cont10m@PERMANENT" driver="sqlite" database="/home/neteler/grassdata/nc_spm_latest/nc_spm_08/PERMANENT/sqlite/sqlite.db" table="elev_ned10m_cont10m" key="cat" layer="1" separator="|"
+GISDBASE: /home/neteler/grassdata/nc_spm_latest
+LOCATION: nc_spm_08 MAPSET: PERMANENT USER: neteler DATE: Mon Nov 26 16:55:44 2012
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect -o map="elev_ned10m_cont10m@PERMANENT" driver="sqlite" database="$GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db" table="elev_ned10m_cont10m" key="cat" layer="1" separator="|"
+GISDBASE: /home/neteler/grassdata
+LOCATION: nc_spm_08_grass7 MAPSET: PERMANENT USER: neteler DATE: Fri Dec  7 23:25:12 2012

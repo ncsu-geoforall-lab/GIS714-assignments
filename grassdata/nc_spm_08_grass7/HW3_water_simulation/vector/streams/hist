@@ -1,0 +1,3 @@
+COMMAND: r.to.vect input="streams" output="streams" type="line" column="value"
+GISDBASE: C:\Users\caitl\Documents\grassdata
+LOCATION: nc_spm_08_grass7 MAPSET: HW3_water_simulation USER: caitl DATE: Thu Dec 16 14:36:31 2021

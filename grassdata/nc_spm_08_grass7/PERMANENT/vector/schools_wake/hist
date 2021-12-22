@@ -1,0 +1,15 @@
+COMMAND: v.in.ogr -o dsn="schoolsJuly06.shp" output="wschools" min_area=0.0001 snap=-1
+GISDBASE: /bigdata/grassdata05
+LOCATION: wakestpfeet MAPSET: PERMANENT USER: helena DATE: Tue Nov  7 19:34:09 2006
+---------------------------------------------------------------------------------
+COMMAND: v.proj input="wschools" location="wakestpfeet" output="schools_wake"
+GISDBASE: /bigdata/grassdata05
+LOCATION: ncfromfile MAPSET: PERMANENT USER: helena DATE: Wed Nov  8 00:25:20 2006
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect -o map="schools_wake@PERMANENT" driver="sqlite" database="/home/neteler/grassdata/nc_spm_latest/nc_spm_08/PERMANENT/sqlite/sqlite.db" table="schools_wake" key="cat" layer="1" separator="|"
+GISDBASE: /home/neteler/grassdata/nc_spm_latest
+LOCATION: nc_spm_08 MAPSET: PERMANENT USER: neteler DATE: Mon Nov 26 16:55:46 2012
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect -o map="schools_wake@PERMANENT" driver="sqlite" database="$GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db" table="schools_wake" key="cat" layer="1" separator="|"
+GISDBASE: /home/neteler/grassdata
+LOCATION: nc_spm_08_grass7 MAPSET: PERMANENT USER: neteler DATE: Fri Dec  7 23:25:12 2012

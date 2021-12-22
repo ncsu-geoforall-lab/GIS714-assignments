@@ -1,0 +1,19 @@
+COMMAND: v.in.ogr dsn="geonames_NC_spm.shp" output="geonames_NC" min_area=0.0001 snap=-1
+GISDBASE: /home/neteler/grassdata
+LOCATION: nc_spm_06 MAPSET: PERMANENT USER: neteler DATE: Wed Aug 15 10:40:22 2007
+---------------------------------------------------------------------------------
+COMMAND: v.db.dropcol "geonames_NC" "col=cat_"
+GISDBASE: /home/neteler/grassdata
+LOCATION: nc_spm_06 MAPSET: PERMANENT USER: neteler DATE: Wed Aug 15 10:40:51 2007
+---------------------------------------------------------------------------------
+COMMAND: v.select ainput="geonames_NC" atype="point,line,boundary,centroid,area" alayer=1 binput="zipcodes_wake" btype="point,line,boundary,centroid,area" blayer=1 output="geonames_wake" operator="overlap"
+GISDBASE: /home/neteler/grassdata
+LOCATION: nc_spm_06 MAPSET: PERMANENT USER: neteler DATE: Wed Aug 15 10:40:52 2007
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect -o map="geonames_wake@PERMANENT" driver="sqlite" database="/home/neteler/grassdata/nc_spm_latest/nc_spm_08/PERMANENT/sqlite/sqlite.db" table="geonames_wake" key="cat" layer="1" separator="|"
+GISDBASE: /home/neteler/grassdata/nc_spm_latest
+LOCATION: nc_spm_08 MAPSET: PERMANENT USER: neteler DATE: Mon Nov 26 16:56:59 2012
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect -o map="geonames_wake@PERMANENT" driver="sqlite" database="$GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db" table="geonames_wake" key="cat" layer="1" separator="|"
+GISDBASE: /home/neteler/grassdata
+LOCATION: nc_spm_08_grass7 MAPSET: PERMANENT USER: neteler DATE: Fri Dec  7 23:25:14 2012

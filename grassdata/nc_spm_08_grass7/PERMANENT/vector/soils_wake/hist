@@ -1,0 +1,17 @@
+COMMAND: v.in.ogr dsn="soils.shp" output="soils_swwake" min_area=0.0001 snap=-1
+GISDBASE: /local/home/helena/grassdata07
+LOCATION: nc_spf MAPSET: user1 USER: hmitaso DATE: Wed Dec 19 11:10:11 2007
+---------------------------------------------------------------------------------
+3378 input polygonsTotal area: 2.446771e+08 (3412 areas)Overlapping area: 0.000000e+00 (0 areas)Area without category: 1.078714e+07 (34 areas)
+---------------------------------------------------------------------------------
+COMMAND: v.proj input="soils_swwake" location="nc_spf" mapset="user1" output="soils_wake"
+GISDBASE: /local/home/helena/grassdata07
+LOCATION: nc_spm_07 MAPSET: PERMANENT USER: hmitaso DATE: Wed Dec 19 11:39:16 2007
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect -o map="soils_wake@PERMANENT" driver="sqlite" database="/home/neteler/grassdata/nc_spm_latest/nc_spm_08/PERMANENT/sqlite/sqlite.db" table="soils_wake" key="cat" layer="1" separator="|"
+GISDBASE: /home/neteler/grassdata/nc_spm_latest
+LOCATION: nc_spm_08 MAPSET: PERMANENT USER: neteler DATE: Mon Nov 26 16:56:09 2012
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect -o map="soils_wake@PERMANENT" driver="sqlite" database="$GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db" table="soils_wake" key="cat" layer="1" separator="|"
+GISDBASE: /home/neteler/grassdata
+LOCATION: nc_spm_08_grass7 MAPSET: PERMANENT USER: neteler DATE: Fri Dec  7 23:25:13 2012

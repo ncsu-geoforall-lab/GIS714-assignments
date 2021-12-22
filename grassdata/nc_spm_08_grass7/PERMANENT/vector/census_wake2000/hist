@@ -1,0 +1,20 @@
+COMMAND: v.in.ogr -o dsn="ctracts2000.shp" output="wcensus2000" min_area=0.0001 snap=-1
+GISDBASE: /bigdata/grassdata05
+LOCATION: wakestpfeet MAPSET: PERMANENT USER: helena DATE: Tue Nov  7 19:54:38 2006
+---------------------------------------------------------------------------------
+105 input polygons
+total area: 2.219943e+09 (105 areas)
+overlapping area: 0.000000e+00 (0 areas)
+area without category: 0.000000e+00 (0 areas)
+---------------------------------------------------------------------------------
+COMMAND: v.proj input="wcensus2000" location="wakestpfeet" output="census_wake2000"
+GISDBASE: /bigdata/grassdata05
+LOCATION: ncfromfile MAPSET: PERMANENT USER: helena DATE: Tue Nov  7 21:08:53 2006
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect -o map="census_wake2000@PERMANENT" driver="sqlite" database="/home/neteler/grassdata/nc_spm_latest/nc_spm_08/PERMANENT/sqlite/sqlite.db" table="census_wake2000" key="cat" layer="1" separator="|"
+GISDBASE: /home/neteler/grassdata/nc_spm_latest
+LOCATION: nc_spm_08 MAPSET: PERMANENT USER: neteler DATE: Mon Nov 26 16:57:10 2012
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect -o map="census_wake2000@PERMANENT" driver="sqlite" database="$GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db" table="census_wake2000" key="cat" layer="1" separator="|"
+GISDBASE: /home/neteler/grassdata
+LOCATION: nc_spm_08_grass7 MAPSET: PERMANENT USER: neteler DATE: Fri Dec  7 23:25:14 2012

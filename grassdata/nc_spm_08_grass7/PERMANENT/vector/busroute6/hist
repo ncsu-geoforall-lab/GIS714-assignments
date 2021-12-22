@@ -1,0 +1,16 @@
+COMMAND: v.in.ogr dsn="Rt6_Sp07.shp" output="Rt6_Sp07" min_area=0.0001 snap=-1
+GISDBASE: /bigdata/grassdata05
+LOCATION: wakestpfeet MAPSET: helena USER: helena DATE: Thu Mar 15 23:35:50 2007
+---------------------------------------------------------------------------------
+COMMAND: v.proj input="Rt6_Sp07" location="wakestpfeet" mapset="helena"
+GISDBASE: /bigdata/grassdata05
+LOCATION: nc_spm MAPSET: user1 USER: helena DATE: Fri Mar 16 01:34:36 2007
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect -o map="busroute6@PERMANENT" driver="sqlite" database="/home/neteler/grassdata/nc_spm_latest/nc_spm_08/PERMANENT/sqlite/sqlite.db" table="busroute6" key="cat" layer="1" separator="|"
+GISDBASE: /home/neteler/grassdata/nc_spm_latest
+LOCATION: nc_spm_08 MAPSET: PERMANENT USER: neteler DATE: Mon Nov 26 16:56:20 2012
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect -o map="busroute6@PERMANENT" driver="sqlite" database="$GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db" table="busroute6" key="cat" layer="1" separator="|"
+GISDBASE: /home/neteler/grassdata
+LOCATION: nc_spm_08_grass7 MAPSET: PERMANENT USER: neteler DATE: Fri Dec  7 23:25:13 2012

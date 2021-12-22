@@ -1,0 +1,16 @@
+COMMAND: v.in.dxf -1 input="P079215.DXF"
+GISDBASE: /bigdata/grassdata05
+LOCATION: wakestpfeet MAPSET: helena USER: helena DATE: Thu Jan 11 21:15:40 2007
+---------------------------------------------------------------------------------
+COMMAND: v.proj input="P079215" location="wakestpfeet" mapset="helena"
+GISDBASE: /bigdata/grassdata05
+LOCATION: nc_spm MAPSET: user1 USER: helena DATE: Fri Mar 16 01:37:55 2007
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect -o map="P079215@PERMANENT" driver="sqlite" database="/home/neteler/grassdata/nc_spm_latest/nc_spm_08/PERMANENT/sqlite/sqlite.db" table="P079215" key="cat" layer="1" separator="|"
+GISDBASE: /home/neteler/grassdata/nc_spm_latest
+LOCATION: nc_spm_08 MAPSET: PERMANENT USER: neteler DATE: Mon Nov 26 16:55:01 2012
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect -o map="P079215@PERMANENT" driver="sqlite" database="$GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db" table="P079215" key="cat" layer="1" separator="|"
+GISDBASE: /home/neteler/grassdata
+LOCATION: nc_spm_08_grass7 MAPSET: PERMANENT USER: neteler DATE: Fri Dec  7 23:25:11 2012

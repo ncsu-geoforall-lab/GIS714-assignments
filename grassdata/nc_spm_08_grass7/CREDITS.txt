@@ -1,0 +1,19 @@
+This OSGeo sample dataset for research, development and education was
+prepared thanks to agencies providing public access to geospatial
+data. We are especially grateful to the North Carolina (NC) Center for
+Geographic Information and Analysis, Wake County GIS, NC State Climate
+Office, NC Department of Transportation, USGS and NASA for making
+their data available.  Advice and assistance with the data set by
+Julia Harrell, Silvia Terziotti, Robert Austin, Adeola Dokun, Jeff
+Essic, and Doug Newcomb, and computer system assistance by Micah Colon
+are greatly appreciated. Martin Spott is acknowedged for processing
+of geonames.org data for NC.
+
+The processing of MODIS time series (separate MAPSET) was kindly
+supported by telascience.org, we are grateful to John Graham for
+granting access to these computational resources.
+
+
+August 2007                                          Helena Mitasova
+                                                      Markus Neteler
+                                            http://www.grassbook.org

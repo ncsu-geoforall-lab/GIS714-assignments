@@ -1,0 +1,23 @@
+COMMAND: v.in.ogr dsn="wakecounty_hl.shp" output="wakecounty_hl" min_area=0.0001 snap=-1
+GISDBASE: /bigdata/grassdata05
+LOCATION: wakestpfeet MAPSET: PERMANENT USER: helena DATE: Tue Nov  7 19:37:02 2006
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+COMMAND: v.proj input="whydrolines" location="wakestpfeet" mapset="PERMANENT" output="hydrolines_wake"
+GISDBASE: /bigdata/grassdata05
+LOCATION: ncfromfile MAPSET: PERMANENT USER: helena DATE: Tue Nov  7 20:56:30 2006
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+COMMAND: v.select ainput="streams" atype="point,line,boundary,centroid,area" alayer=1 binput="region_10m" btype="point,line,boundary,centroid,area" blayer=1 output="streams_region10m" operator="overlap"
+GISDBASE: /bigdata/grassdata05
+LOCATION: nc_spm MAPSET: user1 USER: helena DATE: Wed Feb 14 22:42:44 2007
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect -o map="streams@PERMANENT" driver="sqlite" database="/home/neteler/grassdata/nc_spm_latest/nc_spm_08/PERMANENT/sqlite/sqlite.db" table="streams" key="cat" layer="1" separator="|"
+GISDBASE: /home/neteler/grassdata/nc_spm_latest
+LOCATION: nc_spm_08 MAPSET: PERMANENT USER: neteler DATE: Mon Nov 26 16:56:17 2012
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect -o map="streams@PERMANENT" driver="sqlite" database="$GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db" table="streams" key="cat" layer="1" separator="|"
+GISDBASE: /home/neteler/grassdata
+LOCATION: nc_spm_08_grass7 MAPSET: PERMANENT USER: neteler DATE: Fri Dec  7 23:25:13 2012

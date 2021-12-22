@@ -1,0 +1,3 @@
+COMMAND: r.to.vect input="basin_5K" output="basin_5K" type="area" column="value"
+GISDBASE: C:\Users\caitl\Documents\grassdata
+LOCATION: nc_spm_08_grass7 MAPSET: HW2_data_simulation USER: caitl DATE: Fri Dec 10 10:21:16 2021

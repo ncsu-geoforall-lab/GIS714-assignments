@@ -1,0 +1,91 @@
+Open Source GIS: A GRASS GIS Approach
+Markus Neteler, Helena Mitasova
+3rd edition 2008
+406 pages, 80 illus.
+Springer, New York
+ISBN-10: 038735767X
+ISBN-13: 978-0-387-35767-6
+e-ISBN-13: 978-0-387-68574-8
+http://www.grassbook.org/
+http://www.springer.com/east/home?SGWID=5-102-22-173664736-0&changeHeader=true
+
+
+SAMPLE DATA HISTORY
+
+#########################################
+- added PROJ_EPSG, 30 Oct 2015
+
+#########################################
+- added sqlite/ subdirectories to fix https://trac.osgeo.org/grass/ticket/2044, 25 Jul 2013
+- update to fix SQLite DB connections, 7 Dec 2012
+
+#########################################
+nc_spm_08_grass70 updated to GRASS 7, 26 Nov 2012
+- PERMANENT updated to SQLite backend for vector map attributes
+- sqlite/ mapset removed as no longer needed
+
+#########################################
+nc_spm_08 released 2008, 18 May
+
+- fixed names in imagery group "lsat7_2000"
+
+#########################################
+nc_spm_07 released 2007, 20 December
+
+- elev_contour_3m removed
+- soils_wake clipped to SW Wake region
+- elev_lid792_bepts clipped to subregion of tile 792
+- renamed vector maps: elev_lidrural_mrpts_metric -> elev_lidrural_mrpts
+- additional raster and vector titles cleaned up
+- three planimetry tiles P07921* added to cover rural_1m region
+
+#########################################
+nc_spm_06 released 2007, 15 Aug
+
+- CREDITS.txt and VERSION.txt files added
+- raster and vector titles cleaned up
+- nc_state vector map added
+- poi_names_wake, geonames_NC and geonames_wake vector maps added
+- landclass96 raster map colors improved
+- reimported import ZIP_Codes.shp again with snapping for gaps/slivers
+- renamed vector maps: elev_lidrural_mrpts -> elev_lidrural_mrptsft
+- renamed raster maps: elevlid_D792_6m -> el_D7XX_6m
+- PERMANENT/PROJ_INFO: switched lat_1 and lat_2 values to match EPSG order
+  (this also gets QGIS recognizing it), matching order in /usr/share/proj/epsg
+  lat_1: 36.16666666666666
+  lat_2: 34.33333333333334
+  lat_0: 33.75
+
+#########################################
+nc_spm_05 released 2007, May 9
+
+- added 3D precipitation map: precip_30ynormals_3d
+- added overpasses map from NCDOT
+- fixed vector titles + crediting
+- g.rename vect=elev_contour_3m,elev_ned10m_cont10m
+- g.rename vect=region_10m,swwake_10m
+- landsat/ mapset added with lsat5_1987_* and lsat7_2000_*
+- elev_lid792_cont1m added
+
+
+#########################################
+nc_spm_04 released 2007, Apr 22 
+
+added to PERMANENT:
+ vector:
+  boundary_county
+  elev_lid792_mrpts
+  precip_30ynormals
+  renamed ncfl_lidar_79200WC_pts to elev_lid792_bepts
+
+ raster:
+  elev_state_500m
+  landsat7
+
+removed:
+ landuse92
+ scholls_publ
+ elev_lid_3m
+
+some raster titles added 
+
