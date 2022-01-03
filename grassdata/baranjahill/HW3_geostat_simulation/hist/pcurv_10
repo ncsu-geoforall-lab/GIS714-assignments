@@ -1,4 +1,4 @@
-Wed Dec 22 11:57:56 2021
+Mon Jan 03 16:22:09 2022
 pcurv_10
 HW3_geostat_simulation
 caitl
@@ -11,4 +11,4 @@ The elevation map is elevation_10
 v.surf.rst input="elevations" layer="1" zcolumn="VALUE" elevation="e\
 levation_10" slope="slope_10" aspect="aspect_10" pcurvature="pcurv_1\
 0" tcurvature="tcurv_10" nprocs=1 tension=40. segmax=40 npmin=300 dm\
-in=5.001238 dmax=25.006191 zscale=1.0
+in=5.000000 dmax=25.000000 zscale=1.0
