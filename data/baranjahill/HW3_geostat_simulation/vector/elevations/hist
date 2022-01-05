@@ -1,3 +1,0 @@
-COMMAND: v.in.ogr --overwrite input="../data/tmp/elevations.shp" min_area=0.0001 type="" snap=-1
-GISDBASE: C:\Users\caitl\Documents\CourseWork\GIS714_TA\GIS714-assignments\data
-LOCATION: baranjahill MAPSET: HW3_geostat_simulation USER: caitl DATE: Tue Jan 04 15:18:32 2022

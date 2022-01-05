@@ -1,7 +1,0 @@
-COMMAND: v.random output="random_view" npoints=10 layer="-1" zmin=0.0 zmax=0.0 seed=4 column_type="double precision"
-GISDBASE: C:\Users\caitl\Documents\grassdata
-LOCATION: nc_spm_08_grass7 MAPSET: HW2_data_simulation USER: caitl DATE: Wed Dec 08 18:58:31 2021
----------------------------------------------------------------------------------
-COMMAND: v.perturb input="random_view" layer="-1" output="random_view_perturb" distribution="uniform" parameters=20 minimum=0.0 seed=1
-GISDBASE: C:\Users\caitl\Documents\grassdata
-LOCATION: nc_spm_08_grass7 MAPSET: HW2_data_simulation USER: caitl DATE: Wed Dec 08 18:59:57 2021
