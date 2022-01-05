@@ -1,3 +1,0 @@
-COMMAND: r.to.vect input="stream10_300t" output="stream10_300t" type="line" column="value"
-GISDBASE: C:\Users\caitl\Documents\CourseWork\GIS714_TA\GIS714-assignments\grassdata
-LOCATION: baranjahill MAPSET: HW3_geostat_simulation USER: caitl DATE: Mon Jan 03 16:22:28 2022
