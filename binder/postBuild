@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# exit on error
+set -e
+
+# get the source code
+git clone --branch releasebranch_8_0 --depth 1 https://github.com/OSGeo/grass.git
+
+cd grass
+
+# compile
+./configure \
+    --enable-largefile=yes \
+    --with-nls \
+    --with-cxx \
+    --with-readline \
+    --with-bzlib \
+    --with-pthread \
+    --with-proj-share=/usr/share/proj \
+    --with-geos=/usr/bin/geos-config \
+    --with-cairo \
+    --with-opengl-libs=/usr/include/GL \
+    --with-freetype=yes --with-freetype-includes="/usr/include/freetype2/" \
+    --with-sqlite=yes
+make
+
+# put command on path
+# ensure the user specific bin dir exists (already on path)
+mkdir -p $HOME/.local/bin/
+# create link to build
+ln -s $HOME/grass/bin.*/grass* $HOME/.local/bin/grass
