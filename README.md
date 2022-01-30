@@ -1,6 +1,6 @@
 # GIS714-assignments
 
-Try these assignments in Binder using the button belowL
+Try these assignments in Binder using the button below.
 
 [![Binder](https://camo.githubusercontent.com/581c077bdbc6ca6899c86d0acc6145ae85e9d80e6f805a1071793dbe48917982/68747470733a2f2f6d7962696e6465722e6f72672f62616467655f6c6f676f2e737667)](https://mybinder.org/v2/gh/chaedri/GIS714-assignments/main?urlpath=lab%2Ftree%2FAssignment2%2FGIS714_assignment2B-part1.ipynb)
 
