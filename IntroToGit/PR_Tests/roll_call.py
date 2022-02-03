@@ -4,7 +4,7 @@ import os
 filelist = os.listdir("./")
 
 # Remove this file (let's avoid recursion!)
-filelist.remove("run_introductions.py")
+filelist.remove("roll_call.py")
 
 # Run all of the files
 for f in filelist: 
