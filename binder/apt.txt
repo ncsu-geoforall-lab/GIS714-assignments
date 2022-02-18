@@ -31,7 +31,6 @@ make
 netcdf-bin
 p7zip
 proj-bin
-r-base
 sqlite3
 unixodbc-dev
 xvfb
