@@ -4,3 +4,4 @@ numpy
 Pillow
 ply
 PyVirtualDisplay
+rpy2
