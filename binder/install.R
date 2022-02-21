@@ -1,1 +1,5 @@
-
+install.packages("rgdal")
+install.packages("gstat")
+install.packages("geoR")
+install.packages("devtools")
+install.packages("IRkernel")
