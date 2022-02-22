@@ -1,0 +1,4 @@
+COMMAND: v.in.ogr input="C:\Users\caitl\Documents\CourseWork\GIS714_TA\GIS714-assignments\data\elevations_utm.shp" layer="elevations_utm" output="elevations_utm" min_area=0.0001 type="" snap=-1
+GISDBASE: C:\Users\caitl\Documents\grassdata
+LOCATION: baranjahill MAPSET: PERMANENT USER: caitl DATE: Tue Feb 22 17:42:54 2022
+---------------------------------------------------------------------------------
