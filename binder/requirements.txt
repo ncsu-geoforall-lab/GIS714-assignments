@@ -1,0 +1,7 @@
+folium
+matplotlib
+numpy
+Pillow
+ply
+PyVirtualDisplay
+rpy2

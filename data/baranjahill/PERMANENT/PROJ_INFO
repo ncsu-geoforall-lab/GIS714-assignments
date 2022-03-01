@@ -1,0 +1,6 @@
+name: WGS 84 / UTM zone 34N
+datum: wgs84
+ellps: wgs84
+proj: utm
+zone: 34
+no_defs: defined
