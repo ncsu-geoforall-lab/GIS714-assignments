@@ -1,0 +1,3 @@
+COMMAND: v.in.ascii -t input="-" output="towns" format="point" separator="comma" skip=0 x=1 y=2 z=0 cat=0
+GISDBASE: /home/anna/Documents/GRASS/temporal-workshop-foss4g-2014/grassdata_upload
+LOCATION: NC_spm_temporal_workshop MAPSET: PERMANENT USER: anna DATE: Sun Aug 17 18:26:19 2014

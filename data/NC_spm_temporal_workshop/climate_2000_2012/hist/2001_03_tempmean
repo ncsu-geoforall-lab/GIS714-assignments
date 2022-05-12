@@ -1,0 +1,9 @@
+Mon Oct 14 17:52:05 2013
+2001_03_tempmean
+climate_1970_2012
+anna
+raster
+State Climate Office of North Carolina
+http://convection.meas.ncsu.edu:8080/thredds/catalog/catalog.html
+gridded PRISM estimates
+(2001_03_tempmean_F - 32) * 5 / 9
