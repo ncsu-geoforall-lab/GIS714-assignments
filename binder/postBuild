@@ -4,7 +4,7 @@
 set -e
 
 # get the source code
-git clone --branch releasebranch_8_0 --depth 1 https://github.com/OSGeo/grass.git
+git clone --branch releasebranch_8_2 --depth 1 https://github.com/OSGeo/grass.git
 
 cd grass
 
