@@ -1,0 +1,6 @@
+name: NAD83(2011) / UTM zone 17N
+datum: nad83_2011
+ellps: grs80
+proj: utm
+zone: 17
+no_defs: defined
