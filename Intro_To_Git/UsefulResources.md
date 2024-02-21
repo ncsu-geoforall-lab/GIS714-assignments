@@ -4,7 +4,11 @@
 
 https://docs.github.com/en/get-started/quickstart/hello-world
 
-* We're going to use this tutorial written by CGA's own Corey White next week:
+* Git Course by Vaclav Petras, 2015:
+
+https://ncsu-geoforall-lab.github.io/git-and-github-workshop/
+
+* GRASS GIS and Mapbox tutorial written by CGA's own Corey White:
 
 https://github.com/ncsu-geoforall-lab/grass-mapbox-tutorial
 
