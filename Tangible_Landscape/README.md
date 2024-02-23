@@ -3,7 +3,9 @@
 _Caitlin Haedrich_
 
 [Submission Repository with Submission Directions](https://github.com/ncsu-geoforall-lab/gis714-2024-tangible-landscape/)
+
 [GIS714 Website](https://ncsu-geoforall-lab.github.io/geospatial-simulations-course/topics/tangible_landscape.html)
+
 [GIS714-assignments Intro to Git](https://github.com/ncsu-geoforall-lab/GIS714-assignments/tree/main/Intro_To_Git)
 
 ## Assignment Directions
