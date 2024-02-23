@@ -1,5 +1,9 @@
 # Useful Resources for Learning Git and GitHub
 
+* Step by Step directions for submitting a Tangible Landscape Activity on GitHub
+
+https://github.com/ncsu-geoforall-lab/gis714-2024-tangible-landscape
+
 * Quickstart Intro to using GitHub
 
 https://docs.github.com/en/get-started/quickstart/hello-world
