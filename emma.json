@@ -1,0 +1,21 @@
+{
+  "tasks": [
+    {
+      "layers": [
+        ["d.rast", "map=elev_lid792_1m"],
+        ["d.vect", "map=buffers"]
+      ],
+      "base": "elev_lid792_1m",
+      "scanning_params": {
+        "smooth": 10,
+        "zexag": 2,
+        "numscans": 1,
+        "interpolate": true
+      },
+      "analyses": "simple_example.py",
+      "title": "Buffers and Firestations",
+      "author": "Emma",
+      "instructions": "Will create a buffer around each pin."
+    }
+  ]
+}
