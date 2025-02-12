@@ -1,4 +1,4 @@
-# NCSU GIS 714 Spring 2024: Tangible Landscape
+# NCSU GIS 714: Tangible Landscape
 
 _Caitlin Haedrich_
 
